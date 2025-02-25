@@ -347,34 +347,3 @@ sensevoice2jsonl \
 
 Ensure to modify the train_tool in finetune.sh to the absolute path of `funasr/bin/train_ds.py` from the FunASR installation directory you have set up earlier.
 
-```shell
-bash finetune.sh
-```
-
-## WebUI
-
-```shell
-python webui.py
-```
-
-<div align="center"><img src="image/webui.png" width="700"/> </div>
-
-
-## Remarkable Third-Party Work
-- Triton (GPU) Deployment Best Practices: Using Triton + TensorRT, tested with FP32, achieving an acceleration ratio of 526 on V100 GPU. FP16 support is in progress. [Repository](https://github.com/modelscope/FunASR/blob/main/runtime/triton_gpu/README.md)
-- Sherpa-onnx Deployment Best Practices: Supports using SenseVoice in 10 programming languages: C++, C, Python, C#, Go, Swift, Kotlin, Java, JavaScript, and Dart. Also supports deploying SenseVoice on platforms like iOS, Android, and Raspberry Pi. [Repository](https://k2-fsa.github.io/sherpa/onnx/sense-voice/index.html)
-- [SenseVoice.cpp](https://github.com/lovemefan/SenseVoice.cpp). Inference of SenseVoice in pure C/C++ based on GGML, supporting 3-bit, 4-bit, 5-bit, 8-bit quantization, etc. with no third-party dependencies.
-- [streaming-sensevoice](https://github.com/pengzhendong/streaming-sensevoice) processes inference in chunks. To achieve pseudo-streaming, it employs a truncated attention mechanism, sacrificing some accuracy. Additionally, this technology supports CTC prefix beam search and hot-word boosting features.
-- [OmniSenseVoice](https://github.com/lifeiteng/OmniSenseVoice) is optimized for lightning-fast inference and batching process. 
-
-<a name="Community"></a>
-# Community
-If you encounter problems in use, you can directly raise Issues on the github page.
-
-You can also scan the following DingTalk group QR code to join the community group for communication and discussion.
-
-|                          FunASR                          |
-|:--------------------------------------------------------:|
-| <img src="image/dingding_funasr.png" width="250"/></div> |
-
-
